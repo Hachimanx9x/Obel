@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+   
     private Rigidbody2D MyRB;
     private float diry;
     private float X,Y,rangeX,rangeY,rangeUp, rangeDown;
@@ -32,26 +33,20 @@ public class Bullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (Time.time > life_time) {
             Destroy(gameObject); 
         }
-            if (dir > 0) {
-            if (transform.position.x > X + rangeX) {
-                speed += 0.03f; 
-            }
-        }
-        if (dir < 0){
-            if (transform.position.x > X - rangeX)
-            {
-                speed += 0.03f;
-            }
-        }
-     
+        if (transform.position.x > X - rangeX)
+        {
+            speed += 0.03f;
+        }      
+
 
         if (transform.position.y > Y + rangeY) {
 
             diry = rangeDown;
         }
-            MyRB.velocity = new Vector2(+speed * dir, +diry);
+            MyRB.velocity = new Vector2(+speed , +diry);
     }
 }

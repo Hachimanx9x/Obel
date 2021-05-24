@@ -200,10 +200,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6efa543830b92654e86e902ae5448903, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Obel: {fileID: 4091779659617181673, guid: f4f06bd7ffcacf748b4192dab32436b0, type: 3}
   speed: 1.3
   dir: -1
   up: 1.2000000476837158
   down: 1.8
+  life_time: 5
 --- !u!1001 &3685615880524702213
 PrefabInstance:
   m_ObjectHideFlags: 0
