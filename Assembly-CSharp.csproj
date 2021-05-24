@@ -65,6 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Bullet.cs" />
+    <Compile Include="Assets\Scripts\Camera.cs" />
     <Compile Include="Assets\Scripts\WalkObel.cs" />
     <Compile Include="Assets\Scripts\detect.cs" />
     <Compile Include="Assets\Scripts\shoot.cs" />
