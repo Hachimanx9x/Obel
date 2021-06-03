@@ -9,6 +9,7 @@ public class WalkObel : MonoBehaviour
     public float Velocidad;
     bool voltear = true;
     AudioSource Sonido;
+    public GameObject gameObject;
 
     // Start is called before the first frame update
     void Start()
@@ -16,6 +17,8 @@ public class WalkObel : MonoBehaviour
         RB = GetComponent<Rigidbody2D>();
         Anim = GetComponent<Animator>();
         Sonido = GetComponent<AudioSource>();
+        
+        gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -34,7 +37,7 @@ public class WalkObel : MonoBehaviour
         } 
         
         else if (mover < 0 && voltear) 
-         {
+        {
             voltear = !voltear;
             Vector3 escala = transform.localScale;
             escala.x *= -1;//para que gire
@@ -47,11 +50,23 @@ public class WalkObel : MonoBehaviour
             //GetComponent<Animator>().SetBool("Ataque", false);
             Anim.SetBool("Ataque", true);
         }
-
+        
         else
         {
             //GetComponent<Animator>().SetBool("Ataque", true);
             Anim.SetBool("Ataque", false);
+        }
+
+        //animacion defensa
+        if(Input.GetKey(KeyCode.E)){
+
+            Anim.SetBool("Defensa", true);
+            gameObject.SetActive(true);
+
+        }else{
+
+            gameObject.SetActive(false);
+            Anim.SetBool("Defensa", false);
         }
 
     }
