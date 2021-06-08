@@ -18,7 +18,11 @@ public class shoot : MonoBehaviour
         Obel = GameObject.FindWithTag("Player");
       
         }
-
+    void OnTriggerEnter2D(Collider2D col) {
+        if (col.gameObject.tag == "Power") {
+            Destroy(gameObject);
+        }
+    }
         // Update is called once per frame
         void Update()
     {

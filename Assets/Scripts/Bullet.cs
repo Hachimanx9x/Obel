@@ -41,7 +41,14 @@ public class Bullet : MonoBehaviour
             dir = 1;
         }
     }
-
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.tag == "Shield") {
+            Destroy(gameObject);
+        }
+        
+       
+    }
     // Update is called once per frame
     void Update()
     {
