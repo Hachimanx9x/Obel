@@ -38,7 +38,7 @@ public class shoot : MonoBehaviour
             {
                 //do stuff here (like instantiate)
                 Instantiate(Molo, Molotov.position, transform.rotation);
-
+                Instantiate(Molo, Molotov.position, transform.rotation);
 
                 //increment next_spawn_time
                 next_spawn_time += 5.0f;
@@ -54,6 +54,7 @@ public class shoot : MonoBehaviour
             if (Time.time > next_spawn_time)
             {
                 //do stuff here (like instantiate)
+                Instantiate(Molo, Molotov.position, transform.rotation);
                 Instantiate(Molo, Molotov.position, transform.rotation);
 
 

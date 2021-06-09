@@ -57,6 +57,19 @@ public class WalkObel : MonoBehaviour
             Anim.SetBool("Ataque", false);
         }
 
+        //Ataque 2
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            //GetComponent<Animator>().SetBool("Ataque", false);
+            Anim.SetBool("Ataque2", true);
+        }
+        
+        else
+        {
+            //GetComponent<Animator>().SetBool("Ataque", true);
+            Anim.SetBool("Ataque2", false);
+        }
+
         //animacion defensa
         if(Input.GetKey(KeyCode.E)){
 
