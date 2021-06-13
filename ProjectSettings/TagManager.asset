@@ -9,6 +9,7 @@ TagManager:
   - Shield
   - Enemy
   - Power
+  - Floor
   layers:
   - Default
   - TransparentFX
@@ -19,7 +20,7 @@ TagManager:
   - 
   - 
   - Obel
-  - 
+  - Floor
   - 
   - 
   - 
@@ -46,6 +47,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Fondo
+    uniqueID: 3054310817
+    locked: 0
   - name: Enemigo
     uniqueID: 2541833931
     locked: 0
@@ -57,7 +61,4 @@ TagManager:
     locked: 0
   - name: loqueyoquiera
     uniqueID: 1691248745
-    locked: 0
-  - name: New Layer
-    uniqueID: 3054310817
     locked: 0
